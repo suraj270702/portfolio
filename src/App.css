@@ -28,3 +28,7 @@ background: linear-gradient(91deg, #FF9C1A 7.92%, #E80505 108.2%);
 
 
 }
+
+.img{
+  mix-blend-mode: multiply;
+}
