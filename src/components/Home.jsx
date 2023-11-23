@@ -11,7 +11,7 @@ const Home = () => {
     let copy = [...active]
     for(let i=0;i<copy.length;i++){
      if(index === i){
-      copy[index] = !copy[index]
+      copy[index] = true
      }
      else{
       copy[i]=false
@@ -20,8 +20,29 @@ const Home = () => {
     
     setActive(copy)
   }
-
   
+  const resumeFileId = '13O6ncFI2GLeNQv8TEeUVqHILAT8SgS3e'; // Replace with your Google Drive file ID
+  const resumeFileName = 'surajmauryaresume.pdf'; // Change the filename if needed
+
+  const downloadResume = () => {
+    const directDownloadLink = `https://drive.google.com/uc?export=download&id=${resumeFileId}`;
+    const link = document.createElement('a');
+
+    // Direct download link from Google Drive
+    link.href = directDownloadLink;
+
+    // Set the download attribute with the filename
+    link.setAttribute('download', resumeFileName);
+
+    // Append the link to the body
+    document.body.appendChild(link);
+
+    // Trigger the download
+    link.click();
+
+    // Cleanup: remove the link
+    document.body.removeChild(link);
+  };
 
   return (
     <>
@@ -43,8 +64,8 @@ const Home = () => {
                 Frontend Developer
               </p>
               <div className="w-[94%] flex gap-[8px] mt-6 md:mx-12 ml-[7%]">
-                <NavLink to="">
-                  <div className="py-[20px] px-[28px] rounded-[8px] bg-[#F2F7FC] w-[70px] h-[60px]">
+                <NavLink to="https://www.facebook.com/people/Suraj-Maurya/pfbid0TEmuu9yV5ENHA9XYvff2Sy8SApmiqFq2bkGAtUC72iVneWucHzLH3fhaxaHPnRvul/?mibextid=ZbWKwL">
+                  <div className="py-[20px] px-[28px] rounded-[8px] bg-[#F2F7FC] hover:bg-[#e9f2fc] w-[70px] h-[60px]">
                     <svg
                       width="12"
                       height="21"
@@ -60,8 +81,8 @@ const Home = () => {
                     </svg>
                   </div>
                 </NavLink>
-                <NavLink to="">
-                  <div className="py-[20px] px-[28px] rounded-[8px] bg-[#F2F7FC] w-[70px] h-[60px]">
+                <NavLink to="https://www.linkedin.com/in/suraj-maurya-8ab6711ab">
+                  <div className="py-[20px] px-[28px] rounded-[8px] bg-[#F2F7FC] hover:bg-[#e9f2fc] w-[70px] h-[60px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="17"
@@ -76,8 +97,8 @@ const Home = () => {
                     </svg>
                   </div>
                 </NavLink>
-                <NavLink to="">
-                  <div className="py-[20px] px-[28px] rounded-[8px] bg-[#F2F7FC] w-[70px] h-[60px]">
+                <NavLink to="https://twitter.com/suraj270702">
+                  <div className="py-[20px] px-[28px] rounded-[8px] bg-[#F2F7FC] hover:bg-[#e9f2fc] w-[70px] h-[60px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="17"
@@ -93,7 +114,7 @@ const Home = () => {
                   </div>
                 </NavLink>
                 <NavLink to="https://github.com/suraj270702">
-                  <div className="py-[20px] px-[28px] rounded-[8px] bg-[#F2F7FC] hover:bg-[#669ed7] w-[70px] h-[60px]">
+                  <div className="py-[20px] px-[28px] rounded-[8px] bg-[#F2F7FC] hover:bg-[#e9f2fc] w-[70px] h-[60px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="17"
@@ -202,7 +223,7 @@ const Home = () => {
                     </div>
                   </div>
                   <hr className="w-[256px] h-[1px] bg-[#E3E3E3] my-6 "></hr>
-                  <button className="btn inline-flex gap-[10px] min-w-[185px] h-[44px] px-[20px] py-[10px] ml-[15%] text-[#F2F7FC] text-[12px] font-[600] leading-[20px] ">
+                  <button onClick={downloadResume} className="btn inline-flex gap-[10px] min-w-[185px] h-[44px] px-[20px] py-[10px] ml-[15%] text-[#F2F7FC] text-[12px] font-[600] leading-[20px] ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -272,7 +293,7 @@ const Home = () => {
                       </div>
                     </div>
                   </NavLink>
-                  <NavLink to="/" className="w-full" onClick={()=>handleUpdate(2)}>
+                  <NavLink to="/work" className="w-full" onClick={()=>handleUpdate(2)}>
                     <div className={`w-full md:w-[80px] h-[80px] rounded-[20px] ${active[2] ? "bg" : "bg-[#E1E8EF]"} flex justify-center items-center`}>
                       <div className="flex flex-col items-center">
                         <div className="w-[24px] h-[24px]">
@@ -296,7 +317,7 @@ const Home = () => {
                       </div>
                     </div>
                   </NavLink>
-                  <NavLink to="/" className="w-full " onClick={()=>handleUpdate(3)}>
+                  <NavLink to="/contact" className="w-full " onClick={()=>handleUpdate(3)}>
                     <div className={`w-full md:w-[80px] h-[80px] rounded-[20px] ${active[3] ? "bg" : "bg-[#E1E8EF]"} flex justify-center items-center`}>
                       <div className="flex flex-col items-center">
                         <div className="w-[24px] h-[24px]">
