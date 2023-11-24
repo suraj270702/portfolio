@@ -67,9 +67,7 @@ const Resume = () => {
               <h4 className='text-[#000] text-[14px] font-[600] mt-1'>89.2%</h4>
             </div>
           </div>
-          <div className='bg-[#FFE3BF] rounded-[10px] w-full h-full md:w-[289px] md:h-[116px]'>
-
-          </div>
+          
 
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>

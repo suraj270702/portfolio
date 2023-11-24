@@ -143,7 +143,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
             {filterData.map((project, i) => (
               <NavLink to={project.link}>
-                <div className="w-full md:w-[350px] h-full  p-2 bg-[#FFE3BF] rounded-[8px]">
+                <div className="w-full md:w-[350px] h-full  p-2 bg-[#FFE3BF] rounded-[8px] hover:translate-y-1">
                   <div className="flex flex-col">
                     <img
                       src={project.img}

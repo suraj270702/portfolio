@@ -43,7 +43,7 @@ const About = () => {
           <div className="mt-3 md:mt-6">
             <h4 className="text-[#000] text-[16px] font-[500] leading-[30px] ">
               Hello there! I'm thrilled to welcome you to my portfolio. I am a
-              passionate and versatile full-stack developer with a keen interest
+              passionate and versatile Frontend developer with a keen interest
               in exploring the latest cutting-edge technologies. My journey in
               the world of web development has been nothing short of
               exhilarating, and I constantly strive to enhance my skills and
@@ -80,8 +80,8 @@ const About = () => {
                 <div className="mt-2">
                   <h4 className="text-[#000] text-[14px] leading-[20px] font-[400] tracking-wide">
                     As a developer, I find myself most captivated by the power
-                    and flexibility of NEXT.js. I'm always eager to dive into
-                    new projects that leverage NEXT.js and discover innovative
+                    and flexibility of REACT.js. I'm always eager to dive into
+                    new projects that leverage REACT.js and discover innovative
                     ways to create fast, scalable, and user-friendly
                     applications.
                   </h4>
